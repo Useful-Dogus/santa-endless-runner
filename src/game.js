@@ -184,7 +184,9 @@ function gameUpdate() {
 }
 
 let audioStarted = false;
-const audio = new Audio('/assets/jingle-bell.mp3');
+const audio = new Audio(
+  'https://github.com/Useful-Dogus/santa-endless-runner/raw/refs/heads/main/assets/jingle-bell.mp3'
+);
 
 function startAudio() {
   if (audioStarted) {
