@@ -172,5 +172,13 @@ document.addEventListener('keyup', (e) => {
   }
 });
 
+document.addEventListener('touchstart', (e) => {
+  santa.isMovingUp = true;
+});
+
+document.addEventListener('touchend', (e) => {
+  santa.isMovingUp = false;
+});
+
 // 게임 시작
 document.addEventListener('DOMContentLoaded', initGame);
