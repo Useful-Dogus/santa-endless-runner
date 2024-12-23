@@ -152,7 +152,7 @@ class Icicle {
       // show score after collision
       ctx.fillStyle = '#aa0000';
       ctx.font = '20px Arial';
-      ctx.fillText(`-10`, this.x, this.y);
+      ctx.fillText('-10', this.x, this.y);
       return;
     }
 
@@ -173,9 +173,6 @@ class Icicle {
 
       ctx.beginPath();
       ctx.moveTo(0, 0);
-      // 가시의 기본 위치
-      const x1 = Math.cos(angle) * (this.size / 2);
-      const y1 = Math.sin(angle) * (this.size / 2);
       // 가시의 끝점
       const x2 = Math.cos(angle) * (this.size / 2 + spikeLength);
       const y2 = Math.sin(angle) * (this.size / 2 + spikeLength);
@@ -206,7 +203,7 @@ class Icicle {
 }
 
 class Fire {
-  constructor(x, y, size) {
+  constructor() {
     this.size = GAME_OBJECT_CONFIG.OBSTACLE_SIZE * 2;
     this.direction = Math.random() < 0.5 ? 'up' : 'down';
     this.x = canvas.width;
@@ -224,7 +221,7 @@ class Fire {
       // show score after collision
       ctx.fillStyle = '#aa0000';
       ctx.font = '20px Arial';
-      ctx.fillText(-10, this.x, this.y);
+      ctx.fillText('-20', this.x, this.y);
       return;
     }
 

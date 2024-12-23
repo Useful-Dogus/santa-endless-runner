@@ -116,7 +116,8 @@ function updateGame() {
   obstacles = obstacles.filter((obstacle) => {
     obstacle.update();
     if (!obstacle.collision && checkCollision(santa, obstacle)) {
-      score = Math.max(0, score - 10);
+      const penalty = obstacle instanceof Icicle ? 10 : 20;
+      score = Math.max(0, score - penalty);
       obstacle.collision = true;
     }
     return obstacle.x > -obstacle.size;
