@@ -3,8 +3,20 @@
   <head>
     <title>산타의 선물 찾기 - 게임</title>
     <link rel="stylesheet" href="styles/main.css" />
+    <style>
+      #countdown {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 5em;
+        z-index: 100;
+      }
+    </style>
   </head>
   <body>
+    <div id="countdown">3</div>
+
     <canvas id="game-canvas"></canvas>
 
     <div id="game-over-modal" class="modal">

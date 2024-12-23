@@ -40,7 +40,7 @@ function getUsernameFromURL() {
 }
 
 // 게임 초기화
-function initGame() {
+async function initGame() {
   username = getUsernameFromURL();
   score = 0;
   gameTimer = GAME_CONFIG.GAME_DURATION;
@@ -48,8 +48,31 @@ function initGame() {
   obstacles = [];
   santa = new Santa(username);
 
+  // 3초 카운트다운
+  showThreeTwoOne();
+  await new Promise((resolve) => setTimeout(resolve, 4000));
+
   startTimer();
   gameLoop = requestAnimationFrame(gameUpdate);
+}
+
+// 3초 카운트다운
+function showThreeTwoOne() {
+  const countDown = document.getElementById('countdown');
+  countDown.style.display = 'block';
+  countDown.textContent = '3';
+  setTimeout(() => {
+    countDown.textContent = '2';
+  }, 1000);
+  setTimeout(() => {
+    countDown.textContent = '1';
+  }, 2000);
+  setTimeout(() => {
+    countDown.textContent = 'Go!';
+  }, 3000);
+  setTimeout(() => {
+    countDown.style.display = 'none';
+  }, 4000);
 }
 
 // 타이머 관리
