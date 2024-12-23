@@ -87,13 +87,13 @@ function restartGame() {
 
 // Spawn game objects
 function spawnObjects() {
-  if (Math.random() < 0.05) {
+  if (Math.random() < 0.04) {
     gifts.push(new Gift());
   }
-  if (Math.random() < 0.02) {
+  if (Math.random() < 0.03) {
     obstacles.push(new Icicle());
   }
-  if (Math.random() < 0.02) {
+  if (Math.random() < 0.03) {
     obstacles.push(new Fire());
   }
 }
