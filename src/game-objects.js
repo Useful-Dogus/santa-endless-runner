@@ -66,7 +66,7 @@ class Gift {
     this.size = GAME_OBJECT_CONFIG.GIFT_SIZE;
     this.x = canvas.width;
     this.y = Math.random() * (canvas.height - this.size);
-    this.speed = 6;
+    this.speed = Math.floor(Math.random() * 4) + 5;
     this.collision = false;
   }
 
@@ -136,7 +136,7 @@ class Icicle {
     this.x = canvas.width;
     this.y = Math.random() * (canvas.height - this.size);
     this.spikes = Math.floor(Math.random() * 6) + 4;
-    this.speed = 6;
+    this.speed = Math.floor(Math.random() * 4) + 5;
     this.spikeLengths = Array(this.spikes)
       .fill(0)
       .map(() => Math.random() * 10 + 10);
