@@ -160,10 +160,23 @@ function gameUpdate() {
   }
 }
 
+let audioStarted = false;
+const audio = new Audio('/assets/jingle-bell.mp3');
+
+function startAudio() {
+  if (audioStarted) {
+    return;
+  }
+  audio.currentTime = 0;
+  audio.play();
+  audioStarted = true;
+}
+
 // 이벤트 리스너
 document.addEventListener('keydown', (e) => {
   if (e.code === 'ArrowUp') {
     santa.isMovingUp = true;
+    startAudio();
   }
 });
 
@@ -175,6 +188,7 @@ document.addEventListener('keyup', (e) => {
 
 document.addEventListener('touchstart', (e) => {
   santa.isMovingUp = true;
+  startAudio();
 });
 
 document.addEventListener('touchend', (e) => {
