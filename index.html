@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>산타의 선물 찾기 - 리더보드</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/leaderboard.css" />
+    <link rel="stylesheet" href="styles/start-game-form.css" />
+
+    <style>
+      body {
+        cursor: url('/assets/rudolph-cursor.png'), auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="leaderboard-screen">
+        <h1>🎅 산타의 선물 찾기 🎁</h1>
+
+        <form class="game-start-form" onsubmit="onSubmit(event)">
+          <input type="text" id="playerName" placeholder="이름을 입력하세요" maxlength="10" />
+          <button type="submit">게임 시작</button>
+        </form>
+
+        <div class="leaderboard-wrapper">
+          <table class="leaderboard-table">
+            <thead>
+              <tr>
+                <th>순위</th>
+                <th>이름</th>
+                <th>점수</th>
+              </tr>
+            </thead>
+            <tbody id="leaderboard-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="src/leaderboard.js"></script>
+    <script src="src/start-game-form-handler.js"></script>
+  </body>
+</html>

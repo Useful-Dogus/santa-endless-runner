@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>산타의 선물 찾기 - 게임</title>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <canvas id="game-canvas"></canvas>
+
+    <div id="game-over-modal" class="modal">
+      <div class="modal-content">
+        <h2>게임 종료!</h2>
+        <p>최종 점수: <span id="final-score">0</span></p>
+        <div class="button-group">
+          <button onclick="location.href='index.html'">리더보드로 돌아가기</button>
+          <button onclick="restartGame()">재도전</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="src/game-objects.js"></script>
+    <script src="src/game.js"></script>
+  </body>
+</html>

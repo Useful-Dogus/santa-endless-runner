@@ -1,0 +1,33 @@
+#leaderboard-screen {
+  width: 100%;
+  padding: 2em;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.leaderboard-wrapper {
+  margin: 20px 0;
+  overflow-x: auto;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #1a1a4d;
+}
+
+.leaderboard-table th {
+  background: #1a1a4d;
+  color: white;
+}
+
+.leaderboard-table tr:nth-child(even) {
+  background: #f2f2f2;
+}
