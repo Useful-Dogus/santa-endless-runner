@@ -57,10 +57,6 @@ class Santa {
     // 산타클로스 이미지 그리기
     ctx.drawImage(this.santaImage, this.x, this.y, this.width, this.height);
 
-    // 충돌 영역 표시
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
-    ctx.fillRect(this.x, this.y, this.width, this.height);
-
     ctx.restore();
   }
 }
