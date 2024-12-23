@@ -3,11 +3,10 @@
   <head>
     <title>산타의 선물 찾기 - 리더보드</title>
     <link rel="stylesheet" href="styles/main.css" />
-    <link rel="stylesheet" href="styles/leaderboard.css" />
     <link rel="stylesheet" href="styles/start-game-form.css" />
-
+    <link rel="stylesheet" href="styles/leaderboard.css" />
     <style>
-      body {
+      * {
         cursor: url('/assets/rudolph-cursor.png'), auto;
       }
     </style>
@@ -18,7 +17,14 @@
         <h1>🎅 산타의 선물 찾기 🎁</h1>
 
         <form class="game-start-form" onsubmit="onSubmit(event)">
-          <input type="text" id="playerName" placeholder="이름을 입력하세요" maxlength="10" />
+          <select id="player-name" required>
+            <option value="콩돌">콩돌</option>
+            <option value="다경">다경</option>
+            <option value="찬희">찬희</option>
+            <option value="예림">예림</option>
+            <option value="보섭">보섭</option>
+            <option value="세진">세진</option>
+          </select>
           <button type="submit">게임 시작</button>
         </form>
 

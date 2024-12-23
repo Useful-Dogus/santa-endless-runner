@@ -46,7 +46,7 @@ function initGame() {
   gameTimer = GAME_CONFIG.GAME_DURATION;
   gifts = [];
   obstacles = [];
-  santa = new Santa();
+  santa = new Santa(username);
 
   startTimer();
   gameLoop = requestAnimationFrame(gameUpdate);

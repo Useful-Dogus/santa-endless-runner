@@ -1,6 +1,6 @@
 const GAME_OBJECT_CONFIG = {
-  SANTA_WIDTH: window.innerWidth * 0.1,
-  SANTA_HEIGHT: window.innerWidth * 0.1 * 0.6,
+  SANTA_WIDTH: window.innerWidth * 0.15,
+  SANTA_HEIGHT: window.innerWidth * 0.15 * 0.6,
   GIFT_SIZE: window.innerWidth * 0.05 * 0.8 * 0.8,
   OBSTACLE_SIZE: window.innerWidth * 0.05 * 0.8 * 0.4,
   JUMP_FORCE: -7,
@@ -8,7 +8,7 @@ const GAME_OBJECT_CONFIG = {
 };
 
 class Santa {
-  constructor() {
+  constructor(username) {
     this.width = GAME_OBJECT_CONFIG.SANTA_WIDTH;
     this.height = GAME_OBJECT_CONFIG.SANTA_HEIGHT;
     this.x = 100;
@@ -17,7 +17,7 @@ class Santa {
     this.isMovingUp = false;
     this.moveCounter = 0; // 애니메이션을 위한 카운터
     this.santaImage = new Image();
-    this.santaImage.src = 'assets/rudolph-and-santa.png';
+    this.santaImage.src = `assets/rudolph-and-santa-${username}.png`;
   }
 
   update() {
